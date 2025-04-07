@@ -19,20 +19,28 @@ public class Electrodomestico extends AparatoElectrico{
     private int peso;
     private int unidadesStock;
 
-    public Electrodomestico(String numSerie, boolean tieneCorrienteElectrica) {
+        public Electrodomestico(Color color, ConsumoEnergetico consumo, String modelo, String marca, int peso, int unidadesStock, String numSerie, boolean tieneCorrienteElectrica) {
         super(numSerie, tieneCorrienteElectrica);
-    }
-
-    public Electrodomestico(Color color, ConsumoEnergetico consumo, double precio, String modelo, String marca, int peso, int unidadesStock, String numSerie, boolean tieneCorrienteElectrica) {
-        super(numSerie, tieneCorrienteElectrica);
-        this.color=(color !=null) ? color : color.BLANCO;
-        this.consumo = (consumo !=null) ? consumo : ConsumoEnergetico.F;
+        this.color= color;
+        this.consumo = consumo;
         this.precio = obtindrePreuVenda();
         this.modelo = modelo;
         this.marca = marca;
-        this.peso = (peso > 0) ? peso : 5;
+        this.peso = peso;
         this.unidadesStock = unidadesStock;
     }
+    
+    public Electrodomestico(String modelo, String marca, int unidadesStock, String numSerie, boolean tieneCorrienteElectrica) {
+        super(numSerie, tieneCorrienteElectrica);
+        this.color=color.BLANCO;
+        this.consumo = ConsumoEnergetico.F;
+        this.precio = obtindrePreuVenda();
+        this.modelo = modelo;
+        this.marca = marca;
+        this.peso = 5;
+        this.unidadesStock = unidadesStock;
+    }
+    
     
     public double obtindrePreuVenda(){
         double precioInicial=100; 
