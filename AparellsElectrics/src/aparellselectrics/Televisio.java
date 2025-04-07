@@ -40,6 +40,7 @@ public class Televisio extends Electrodomestico {
 
     }
 
+    @Override
     public double obtindrePreuVenda() {
         double precioPadre = super.obtindrePreuVenda();
 
@@ -50,5 +51,7 @@ public class Televisio extends Electrodomestico {
         }
 
     }
+    
+    
 
 }

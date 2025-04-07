@@ -8,17 +8,19 @@ package aparellselectrics;
  *
  * @author batoi
  */
-public class Movil extends AparatoElectrico {
+public class Movil extends Dispositivo {
     private Memoria memoria;
     private String marca;
     private String modelo;
 
-    public Movil(Memoria memoria, String marca, String modelo, String numSerie, boolean tieneCorrienteElectrica) {
-        super(numSerie, tieneCorrienteElectrica);
+    public Movil(Memoria memoria, String marca, String modelo, boolean conectadoAInternet, String numSerie, boolean tieneCorrienteElectrica) {
+        super(conectadoAInternet, numSerie, tieneCorrienteElectrica);
         this.memoria = memoria;
         this.marca = marca;
         this.modelo = modelo;
     }
+
+
     
     
     

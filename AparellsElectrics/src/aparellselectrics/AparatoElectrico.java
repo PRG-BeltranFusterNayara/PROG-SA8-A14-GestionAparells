@@ -23,9 +23,7 @@ abstract class AparatoElectrico {
         }else{
         return "No está encendido";
         }
-    }
-
-
+    } 
     
     
     

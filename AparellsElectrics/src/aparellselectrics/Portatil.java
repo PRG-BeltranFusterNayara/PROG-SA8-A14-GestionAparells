@@ -8,18 +8,23 @@ package aparellselectrics;
  *
  * @author batoi
  */
-public class Portatil extends AparatoElectrico{
+public class Portatil extends Dispositivo{
     private int memoriaRam;
     private double velocidadCPU;
     private int tamanyoHD;
-    
 
-    public Portatil(int memoriaRam, double velocidadCPU, int tamanyoHD, String numSerie, boolean tieneCorrienteElectrica) {
-        super(numSerie, tieneCorrienteElectrica);
+
+    public Portatil(int memoriaRam, double velocidadCPU, int tamanyoHD, boolean conectadoAInternet, String numSerie, boolean tieneCorrienteElectrica) {
+        super(conectadoAInternet, numSerie, tieneCorrienteElectrica);
         this.memoriaRam = memoriaRam;
         this.velocidadCPU = velocidadCPU;
         this.tamanyoHD = tamanyoHD;
     }
+
+
+    
+
+  
     
     
     
