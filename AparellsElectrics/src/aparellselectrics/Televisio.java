@@ -47,35 +47,30 @@ public class Televisio extends Electrodomestico {
         }
 
     }
-    
-       public String wifi() {
-        if(this.estaWifiHabilitat){
-        return " Wifi habilitat, ";
-        }else{
-        return " Wifi deshabilitat, ";
+
+    public String wifi() {
+        if (this.estaWifiHabilitat) {
+            return " Wifi habilitat, ";
+        } else {
+            return " Wifi deshabilitat, ";
         }
-       }
+    }
 
-
-       public String internet() {
-        if(this.estaConectadaAInternet){
-        return " Connectat a Internet, ";
-        }else{
-        return " No connectat a Internet, ";
+    public String internet() {
+        if (this.estaConectadaAInternet) {
+            return " Connectat a Internet, ";
+        } else {
+            return " No connectat a Internet, ";
         }
-       }       
-       
+    }
 
-       
     @Override
-    public String toString(){
-        return "\n[Televisió] Núm.Sèrie: "+ getNumSerie() + tieneCorrienteElectricaString()+ encendida()+ 
-                "Marca: " + getMarca() + ",\n Model: " + getModelo() + ", Tipus de consum: " + getConsumo() + 
-                ", Color: " + getColor()+ ", Preu Base: " + getPrecio() + ", Preu final: "+ obtindrePreuVenda()+
-                wifi()+ internet()+ "Resolució: " + resolucio;
-                
-                }
-    
-    
+    public String toString() {
+        return "\n[Televisió] Núm.Sèrie: " + getNumSerie() + tieneCorrienteElectricaString() + encendida()
+                + "Marca: " + getMarca() + ",\n Model: " + getModelo() + ", Tipus de consum: " + getConsumo()
+                + ", Color: " + getColor() + ", Preu Base: " + getPrecio() + ", Preu final: " + obtindrePreuVenda()
+                + wifi() + internet() + "Resolució: " + resolucio;
+
+    }
 
 }

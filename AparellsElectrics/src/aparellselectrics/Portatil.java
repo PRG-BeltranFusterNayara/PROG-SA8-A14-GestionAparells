@@ -8,11 +8,11 @@ package aparellselectrics;
  *
  * @author batoi
  */
-public class Portatil extends Dispositivo{
+public class Portatil extends Dispositivo {
+
     private int memoriaRam;
     private double velocidadCPU;
     private int tamanyoHD;
-
 
     public Portatil(int memoriaRam, double velocidadCPU, int tamanyoHD, boolean conectadoAInternet, String numSerie, boolean tieneCorrienteElectrica) {
         super(conectadoAInternet, numSerie, tieneCorrienteElectrica);
@@ -21,19 +21,11 @@ public class Portatil extends Dispositivo{
         this.tamanyoHD = tamanyoHD;
     }
 
+    public String toString() {
+        return "\n[Portàtil] Núm.Sèrie: " + getNumSerie() + tieneCorrienteElectricaString() + encendida()
+                + internet()+ "RAM: " + memoriaRam + ", Velocitat CPU: "
+                + velocidadCPU + ", Grandària HD: " + tamanyoHD;
 
-       
-    
-    
-public String toString(){
-        return "\n[Portàtil] Núm.Sèrie: "+ getNumSerie() + tieneCorrienteElectricaString();
-                
-                
-                }
-    
+    }
 
-  
-    
-    
-    
 }

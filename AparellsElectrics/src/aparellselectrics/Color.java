@@ -9,14 +9,14 @@ package aparellselectrics;
  * @author batoi
  */
 public enum Color {
-    
+
     BLANCO {
 
         public String toString() {
             return "Blanco";
         }
 
-    }, NEGRO{
+    }, NEGRO {
 
         public String toString() {
             return "Negro";
@@ -28,15 +28,15 @@ public enum Color {
             return "Rojo";
         }
 
-    }, AZUL{
-        public String toString(){
+    }, AZUL {
+        public String toString() {
             return "Azul";
         }
-    
-    }, GRIS{
-        public String toString(){
+
+    }, GRIS {
+        public String toString() {
             return "Gris";
         }
     }
-    
+
 }

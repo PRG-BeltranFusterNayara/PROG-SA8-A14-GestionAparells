@@ -9,6 +9,7 @@ package aparellselectrics;
  * @author batoi
  */
 public class Movil extends Dispositivo {
+
     private Memoria memoria;
     private String marca;
     private String modelo;
@@ -20,13 +21,13 @@ public class Movil extends Dispositivo {
         this.modelo = modelo;
     }
 
+
+
     @Override
     public String toString() {
-        return "Movil{" + "memoria=" + memoria + ", marca=" + marca + ", modelo=" + modelo + '}';
+        return "\n[Mòbil] Núm.Sèrie: " + getNumSerie() + tieneCorrienteElectricaString() + encendida()
+                + internet()+ "Memòria: " +memoria + ", Marca: "
+                + marca + ", Model: " + modelo;
     }
 
-
-    
-    
-    
 }

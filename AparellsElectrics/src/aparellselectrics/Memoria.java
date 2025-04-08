@@ -9,13 +9,13 @@ package aparellselectrics;
  * @author batoi
  */
 public enum Memoria {
-        M64 {
+    M64 {
 
         public String toString() {
             return "64";
         }
 
-    }, M128{
+    }, M128 {
 
         public String toString() {
             return "128";
@@ -27,18 +27,18 @@ public enum Memoria {
             return "256";
         }
 
-    }, M512{
-        public String toString(){
+    }, M512 {
+        public String toString() {
             return "512";
         }
-    
-    }, M1{
-        public String toString(){
+
+    }, M1 {
+        public String toString() {
             return "1Gb";
         }
-        
-    }, M2{
-        public String toString(){
+
+    }, M2 {
+        public String toString() {
             return "2Gb";
         }
     }

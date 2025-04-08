@@ -9,11 +9,12 @@ package aparellselectrics;
  * @author batoi
  */
 public class Dispositivo extends AparatoElectrico {
+
     private boolean conectadoAInternet;
 
     public Dispositivo(String numSerie, boolean tieneCorrienteElectrica) {
         super(numSerie, tieneCorrienteElectrica);
-        this.conectadoAInternet =false;
+        this.conectadoAInternet = false;
     }
 
     public Dispositivo(boolean conectadoAInternet, String numSerie, boolean tieneCorrienteElectrica) {
@@ -25,6 +26,13 @@ public class Dispositivo extends AparatoElectrico {
         return conectadoAInternet;
     }
     
-    
-    
+        
+        public String internet() {
+        if(this.conectadoAInternet) {
+            return " Connectat a Internet, ";
+        } else {
+            return " No connectat a Internet, ";
+        }
+
+}
 }

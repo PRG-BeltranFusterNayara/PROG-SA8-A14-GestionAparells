@@ -9,14 +9,14 @@ package aparellselectrics;
  * @author batoi
  */
 public enum ConsumoEnergetico {
-        
+
     A {
 
         public String toString() {
             return "A";
         }
 
-    }, B{
+    }, B {
 
         public String toString() {
             return "B";
@@ -28,18 +28,18 @@ public enum ConsumoEnergetico {
             return "C";
         }
 
-    }, D{
-        public String toString(){
+    }, D {
+        public String toString() {
             return "D";
         }
-    
-    }, E{
-        public String toString(){
+
+    }, E {
+        public String toString() {
             return "E";
         }
-        
-    }, F{
-        public String toString(){
+
+    }, F {
+        public String toString() {
             return "F";
         }
     }

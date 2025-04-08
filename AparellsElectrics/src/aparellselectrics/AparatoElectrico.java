@@ -9,6 +9,7 @@ package aparellselectrics;
  * @author batoi
  */
 abstract class AparatoElectrico {
+
     private String numSerie;
     private boolean tieneCorrienteElectrica;
     private boolean estaEncendido;
@@ -19,12 +20,12 @@ abstract class AparatoElectrico {
     }
 
     public String tieneCorrienteElectricaString() {
-        if(this.tieneCorrienteElectrica){
-        return " (Corrent elèctric funcionant),";
-        }else{
-        return " (Sense corrent elèctric),";
+        if (this.tieneCorrienteElectrica) {
+            return " (Corrent elèctric funcionant),";
+        } else {
+            return " (Sense corrent elèctric),";
         }
-    } 
+    }
 
     public String getNumSerie() {
         return numSerie;
@@ -37,15 +38,13 @@ abstract class AparatoElectrico {
     public boolean isEstaEncendido() {
         return estaEncendido;
     }
-    
-  
-     public String encendida() {
-        if(this.estaEncendido){
-        return " Esta encesa, ";
-        }else{
-        return " No està encès, ";
+
+    public String encendida() {
+        if (this.estaEncendido) {
+            return " Esta encesa, ";
+        } else {
+            return " No està encès, ";
         }
-       }     
-  
-    
+    }
+
 }
