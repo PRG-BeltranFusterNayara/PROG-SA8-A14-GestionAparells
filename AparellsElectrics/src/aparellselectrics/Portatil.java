@@ -22,6 +22,14 @@ public class Portatil extends Dispositivo{
     }
 
 
+       
+    
+    
+public String toString(){
+        return "\n[Portàtil] Núm.Sèrie: "+ getNumSerie() + tieneCorrienteElectricaString();
+                
+                
+                }
     
 
   

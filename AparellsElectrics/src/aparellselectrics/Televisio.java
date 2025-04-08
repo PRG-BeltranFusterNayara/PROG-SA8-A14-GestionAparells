@@ -10,22 +10,19 @@ package aparellselectrics;
  */
 public class Televisio extends Electrodomestico {
 
-    private boolean estaEncesa;
     private boolean estaWifiHabilitat;
     private boolean estaConectadaAInternet;
     private int resolucio;
 
     public Televisio(Color color, ConsumoEnergetico consumo, String modelo, String marca, int peso, int unidadesStock, String numSerie, boolean tieneCorrienteElectrica) {
         super(color, consumo, modelo, marca, peso, unidadesStock, numSerie, tieneCorrienteElectrica);
-        this.estaEncesa = false;
         this.estaWifiHabilitat = false;
         this.estaConectadaAInternet = false;
         this.resolucio = 20;
     }
 
-    public Televisio(boolean estaEncesa, boolean estaWifiHabilitat, boolean estaConectadaAInternet, int resolucio, Color color, ConsumoEnergetico consumo, String modelo, String marca, int peso, int unidadesStock, String numSerie, boolean tieneCorrienteElectrica) {
+    public Televisio(boolean estaWifiHabilitat, boolean estaConectadaAInternet, int resolucio, Color color, ConsumoEnergetico consumo, String modelo, String marca, int peso, int unidadesStock, String numSerie, boolean tieneCorrienteElectrica) {
         super(color, consumo, modelo, marca, peso, unidadesStock, numSerie, tieneCorrienteElectrica);
-        this.estaEncesa = estaEncesa;
         this.estaWifiHabilitat = estaWifiHabilitat;
         this.estaConectadaAInternet = estaConectadaAInternet;
         this.resolucio = resolucio;
@@ -33,7 +30,6 @@ public class Televisio extends Electrodomestico {
 
     public Televisio(String modelo, String marca, int unidadesStock, String numSerie, boolean tieneCorrienteElectrica) {
         super(modelo, marca, unidadesStock, numSerie, tieneCorrienteElectrica);
-        this.estaEncesa = false;
         this.estaWifiHabilitat = false;
         this.estaConectadaAInternet = false;
         this.resolucio = 20;
@@ -51,6 +47,34 @@ public class Televisio extends Electrodomestico {
         }
 
     }
+    
+       public String wifi() {
+        if(this.estaWifiHabilitat){
+        return " Wifi habilitat, ";
+        }else{
+        return " Wifi deshabilitat, ";
+        }
+       }
+
+
+       public String internet() {
+        if(this.estaConectadaAInternet){
+        return " Connectat a Internet, ";
+        }else{
+        return " No connectat a Internet, ";
+        }
+       }       
+       
+
+       
+    @Override
+    public String toString(){
+        return "\n[Televisió] Núm.Sèrie: "+ getNumSerie() + tieneCorrienteElectricaString()+ encendida()+ 
+                "Marca: " + getMarca() + ",\n Model: " + getModelo() + ", Tipus de consum: " + getConsumo() + 
+                ", Color: " + getColor()+ ", Preu Base: " + getPrecio() + ", Preu final: "+ obtindrePreuVenda()+
+                wifi()+ internet()+ "Resolució: " + resolucio;
+                
+                }
     
     
 

@@ -23,7 +23,7 @@ public class Electrodomestico extends AparatoElectrico{
         super(numSerie, tieneCorrienteElectrica);
         this.color= color;
         this.consumo = consumo;
-        this.precio = obtindrePreuVenda();
+        this.precio = 100;
         this.modelo = modelo;
         this.marca = marca;
         this.peso = peso;
@@ -34,7 +34,7 @@ public class Electrodomestico extends AparatoElectrico{
         super(numSerie, tieneCorrienteElectrica);
         this.color=color.BLANCO;
         this.consumo = ConsumoEnergetico.F;
-        this.precio = obtindrePreuVenda();
+        this.precio = 100;
         this.modelo = modelo;
         this.marca = marca;
         this.peso = 5;
@@ -43,7 +43,7 @@ public class Electrodomestico extends AparatoElectrico{
     
     
     public double obtindrePreuVenda(){
-        double precioInicial=100; 
+        double precioInicial= this.precio; 
         switch (this.consumo) {
             case A -> {
                 return precioInicial+100;
@@ -69,6 +69,34 @@ public class Electrodomestico extends AparatoElectrico{
                 
         }
     
+    }
+
+    public Color getColor() {
+        return color;
+    }
+
+    public ConsumoEnergetico getConsumo() {
+        return consumo;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public int getPeso() {
+        return peso;
+    }
+
+    public int getUnidadesStock() {
+        return unidadesStock;
     }
     
     

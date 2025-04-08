@@ -20,6 +20,11 @@ public class Movil extends Dispositivo {
         this.modelo = modelo;
     }
 
+    @Override
+    public String toString() {
+        return "Movil{" + "memoria=" + memoria + ", marca=" + marca + ", modelo=" + modelo + '}';
+    }
+
 
     
     

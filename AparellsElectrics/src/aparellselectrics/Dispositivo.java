@@ -20,6 +20,10 @@ public class Dispositivo extends AparatoElectrico {
         super(numSerie, tieneCorrienteElectrica);
         this.conectadoAInternet = conectadoAInternet;
     }
+
+    public boolean isConectadoAInternet() {
+        return conectadoAInternet;
+    }
     
     
     
