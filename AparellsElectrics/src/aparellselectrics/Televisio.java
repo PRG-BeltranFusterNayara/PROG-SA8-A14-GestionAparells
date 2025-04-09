@@ -8,7 +8,7 @@ package aparellselectrics;
  *
  * @author batoi
  */
-public class Televisio extends Electrodomestico {
+public class Televisio extends Electrodomestico{
 
     private boolean estaWifiHabilitat;
     private boolean estaConectadaAInternet;
@@ -72,5 +72,6 @@ public class Televisio extends Electrodomestico {
                 + wifi() + internet() + "Resolució: " + resolucio;
 
     }
+
 
 }

@@ -7,15 +7,15 @@ public class Regleta {
     public static int NUM_MAX_APARELLS = 10;
     private HashSet<Endollable> aparatos = new HashSet<Endollable>();
 
-    public boolean endollar(HashSet<Endollable> aparato) {
+    public boolean endollar(Endollable aparato) {
         if (aparatos.contains(aparato)) {
             System.out.println("[" + aparato.getClass().getSimpleName() + "] ja està endollat.");
             return false;
-        } else if (aparatos.size() > NUM_MAX_APARELLS) {
+        } else if (aparatos.size() == NUM_MAX_APARELLS) {
             System.out.println("[" + aparato.getClass().getSimpleName() + "] no puc endollarse ja ni han 10 aparells endollat " + "s.");
             return false;
         } else {
-            //RECORDAR AÑADIR ENERGIA
+            aparato.donarEnergia();
             System.out.println("[" + aparato.getClass().getSimpleName() + "] Aparell endollat");
             aparatos.add((Endollable) aparato);
             return true;
@@ -23,9 +23,9 @@ public class Regleta {
 
     }
 
-    public boolean desendollar(HashSet<Endollable> aparato) {
+    public boolean desendollar(Endollable aparato) {
         if (aparatos.contains(aparato)) {
-            //RECORDAR QUITAR ENERGIA.
+            aparato.llevarEnergia();
             aparatos.remove(aparato);
             System.out.println("[" + aparato.getClass().getSimpleName() + "] Aparell desendollat");
             return true;

@@ -14,7 +14,7 @@ public class TestRegleta {
 
     public static void main(String[] args) {
         HashSet<Endollable> aparatos = new HashSet<Endollable>();
-
+        Regleta regleta = new Regleta();
         
         Llavadora lavadora1 = new Llavadora(51, false, Color.BLANCO, ConsumoEnergetico.D, "Bosch", "V1", 20, 859, "1234A", false);
         Televisio tele1 = new Televisio(false, false, 45, Color.BLANCO, ConsumoEnergetico.F, "LG", "SuperGuay", 15, 286, "1234C", false);
@@ -26,7 +26,29 @@ public class TestRegleta {
         aparatos.add((Endollable) portatil1);
         aparatos.add((Endollable) movil1);
 
+        System.out.println("----------Crear regleta i connectar els quatre aparells-----------");
+        for (Endollable aparato : aparatos){
+            regleta.endollar(aparato);
+        }
         
+        System.out.println("----------Llistar aparells endollats----------");
+        regleta.llistarConnectats();
+        System.out.println("Endolls lliures:" + regleta.obtenirNumeroEnchufesLibres());
+        
+        
+        System.out.println("----------Desconnectar llavadora i televisió----------");
+        regleta.desendollar(lavadora1);
+        regleta.desendollar(tele1);
+        
+        System.out.println("----------Llistar aparells endollats ----------");
+        regleta.llistarConnectats();
+
+        System.out.println("----------Endollar portatil anterior i obtindre missatge d'error ----------");
+        Portatil portatil2 = new Portatil(2048, 5000.0, 1024, false, "1234E", false);
+        regleta.endollar(portatil2);
+
+        System.out.println("----------Desconnectar aparell no endollat (la llavadora)----------");
+        regleta.desendollar(lavadora1);
         
     }
 }
