@@ -10,7 +10,7 @@ import java.util.Objects;
  *
  * @author batoi
  */
-abstract class AparatoElectrico  implements Endollable{
+abstract class AparatoElectrico implements Endollable{
 
     private String numSerie;
     private boolean tieneCorrienteElectrica;

@@ -26,28 +26,28 @@ public class TestRegleta {
         aparatos.add((Endollable) portatil1);
         aparatos.add((Endollable) movil1);
 
-        System.out.println("----------Crear regleta i connectar els quatre aparells-----------");
+        System.out.println("----------Crear regleta i connectar els quatre aparells-----------\n");
         for (Endollable aparato : aparatos){
             regleta.endollar(aparato);
         }
         
-        System.out.println("----------Llistar aparells endollats----------");
+        System.out.println("\n----------Llistar aparells endollats----------");
         regleta.llistarConnectats();
-        System.out.println("Endolls lliures:" + regleta.obtenirNumeroEnchufesLibres());
+        System.out.println("\nEndolls lliures:" + regleta.obtenirNumeroEnchufesLibres());
         
         
-        System.out.println("----------Desconnectar llavadora i televisió----------");
+        System.out.println("\n----------Desconnectar llavadora i televisió----------\n");
         regleta.desendollar(lavadora1);
         regleta.desendollar(tele1);
         
-        System.out.println("----------Llistar aparells endollats ----------");
+        System.out.println("\n----------Llistar aparells endollats ----------");
         regleta.llistarConnectats();
 
-        System.out.println("----------Endollar portatil anterior i obtindre missatge d'error ----------");
+        System.out.println("\n----------Endollar portatil anterior i obtindre missatge d'error ----------\n");
         Portatil portatil2 = new Portatil(2048, 5000.0, 1024, false, "1234E", false);
         regleta.endollar(portatil2);
 
-        System.out.println("----------Desconnectar aparell no endollat (la llavadora)----------");
+        System.out.println("\n----------Desconnectar aparell no endollat (la llavadora)----------\n");
         regleta.desendollar(lavadora1);
         
     }

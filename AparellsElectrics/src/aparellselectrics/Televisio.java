@@ -8,7 +8,7 @@ package aparellselectrics;
  *
  * @author batoi
  */
-public class Televisio extends Electrodomestico{
+public class Televisio extends Electrodomestico implements Activable, Conectable {
 
     private boolean estaWifiHabilitat;
     private boolean estaConectadaAInternet;
@@ -73,5 +73,47 @@ public class Televisio extends Electrodomestico{
 
     }
 
+    @Override
+
+    public void activar() {
+        if (isTieneCorrienteElectrica()) {
+            setEstaEncendido(true);
+            System.out.println("Aparell encès.");
+
+        }
+        System.out.println("No es pot encendre (no hi ha corrent)");
+    }
+
+    @Override
+    public void desactivar() {
+        setEstaEncendido(false);
+        System.out.println("Aparell desactivat");
+    }
+
+    
+    
+    
+    
+    @Override
+    public boolean esPermetConnexio() {
+        if(super.isTieneCorrienteElectrica()&& super.isEstaEncendido()&&estaWifiHabilitat){
+        return true;
+        }
+        
+        return false;
+    }
+
+    @Override
+    public void establirConexio() {
+      if(esPermetConnexio()){
+          estaConectadaAInternet=true;
+          System.out.println("Conexio estableïda");
+      }  
+    }
+
+    @Override
+    public void llevarConexio() {
+        estaConectadaAInternet= false;
+    }
 
 }

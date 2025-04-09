@@ -8,7 +8,7 @@ package aparellselectrics;
  *
  * @author User
  */
-public class Llavadora extends Electrodomestico {
+public class Llavadora extends Electrodomestico implements Activable {
 
     private int carga;
 
@@ -48,4 +48,20 @@ public class Llavadora extends Electrodomestico {
 
     }
 
+    @Override
+
+    public void activar() {
+        if (isTieneCorrienteElectrica()) {
+        setEstaEncendido(true);
+        System.out.println("Aparell encès.");
+
+        }
+        System.out.println("No es pot encendre (no hi ha corrent)");
+    }
+
+    @Override
+    public void desactivar() {
+        setEstaEncendido(false);
+        System.out.println("Aparell desactivat");
+    }
 }
