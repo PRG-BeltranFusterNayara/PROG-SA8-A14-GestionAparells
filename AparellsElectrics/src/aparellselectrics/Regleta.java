@@ -1,18 +1,54 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package aparellselectrics;
 
 import java.util.HashSet;
 
-/**
- *
- * @author User
- */
 public class Regleta {
-    private HashSet<Endollable> aparatos= new HashSet<Endollable>();
-    
-    
-    
+
+    public static int NUM_MAX_APARELLS = 10;
+    private HashSet<Endollable> aparatos = new HashSet<Endollable>();
+
+    public boolean endollar(HashSet<Endollable> aparato) {
+        if (aparatos.contains(aparato)) {
+            System.out.println("[" + aparato.getClass().getSimpleName() + "] ja està endollat.");
+            return false;
+        } else if (aparatos.size() > NUM_MAX_APARELLS) {
+            System.out.println("[" + aparato.getClass().getSimpleName() + "] no puc endollarse ja ni han 10 aparells endollat " + "s.");
+            return false;
+        } else {
+            //RECORDAR AÑADIR ENERGIA
+            System.out.println("[" + aparato.getClass().getSimpleName() + "] Aparell endollat");
+            aparatos.add((Endollable) aparato);
+            return true;
+        }
+
+    }
+
+    public boolean desendollar(HashSet<Endollable> aparato) {
+        if (aparatos.contains(aparato)) {
+            //RECORDAR QUITAR ENERGIA.
+            aparatos.remove(aparato);
+            System.out.println("[" + aparato.getClass().getSimpleName() + "] Aparell desendollat");
+            return true;
+
+        } else {
+            
+            System.out.println("[" + aparato.getClass().getSimpleName() + "] L'aparell no esta endollat a la regleta");
+            return false;
+        }
+
+    }
+
+    public int obtenirNumeroEnchufesLibres() {
+        int cantidadHuecosDisponibles= this.aparatos.size();
+        int enchufesLibres= NUM_MAX_APARELLS- cantidadHuecosDisponibles;
+        
+        return enchufesLibres;
+    }
+
+    public void llistarConnectats() {
+        for (Endollable aparato : aparatos) {
+        System.out.println(aparato);
+        }
+    }
+
 }
