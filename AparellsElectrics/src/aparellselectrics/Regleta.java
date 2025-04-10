@@ -9,7 +9,7 @@ public class Regleta {
 
     public boolean endollar(Endollable aparato) {
         if (aparatos.contains(aparato)) {
-            System.out.println("[" + aparato.getClass().getSimpleName() + "] ja està endollat.");
+            System.out.println("[" + aparato.getClass().getSimpleName() + "] L'aparell ja està endollat a la regleta");
             return false;
         } else if (aparatos.size() == NUM_MAX_APARELLS) {
             System.out.println("[" + aparato.getClass().getSimpleName() + "] no puc endollarse ja ni han 10 aparells endollat " + "s.");

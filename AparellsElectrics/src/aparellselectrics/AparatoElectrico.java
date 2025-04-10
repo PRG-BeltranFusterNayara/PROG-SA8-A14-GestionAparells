@@ -43,9 +43,9 @@ abstract class AparatoElectrico implements Endollable{
 
     public String encendida() {
         if (this.estaEncendido) {
-            return " Esta encesa, ";
+            return " Aparell encès.";
         } else {
-            return " No està encès, ";
+            return " No es pot encendre (no hi ha corrent).";
         }
     }
 

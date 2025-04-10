@@ -43,9 +43,9 @@ public class TestRegleta {
         System.out.println("\n----------Llistar aparells endollats ----------");
         regleta.llistarConnectats();
 
-        System.out.println("\n----------Endollar portatil anterior i obtindre missatge d'error ----------\n");
-        Portatil portatil2 = new Portatil(2048, 5000.0, 1024, false, "1234E", false);
-        regleta.endollar(portatil2);
+        System.out.println("\n----------Endollar mòbil anterior i obtindre missatge d'error ----------\n");
+        Movil movil2= new Movil(Memoria.M256, "Samsung", "Galaxy S21", false, "1234F", false);
+        regleta.endollar(movil2);
 
         System.out.println("\n----------Desconnectar aparell no endollat (la llavadora)----------\n");
         regleta.desendollar(lavadora1);

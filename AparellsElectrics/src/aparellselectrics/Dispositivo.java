@@ -65,7 +65,6 @@ public class Dispositivo extends AparatoElectrico implements Activable, Conectab
     public void establirConexio() {
       if(esPermetConnexio()){
           conectadoAInternet=true;
-          System.out.println("Conexio estableïda");
       }  
     }
 

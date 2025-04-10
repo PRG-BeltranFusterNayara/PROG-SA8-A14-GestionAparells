@@ -80,8 +80,9 @@ public class Televisio extends Electrodomestico implements Activable, Conectable
             setEstaEncendido(true);
             System.out.println("Aparell encès.");
 
-        }
-        System.out.println("No es pot encendre (no hi ha corrent)");
+        }else{
+        System.out.println("No es pot encendre (no hi ha corrent)");}
+        
     }
 
     @Override
@@ -90,8 +91,10 @@ public class Televisio extends Electrodomestico implements Activable, Conectable
         System.out.println("Aparell desactivat");
     }
 
-    
-    
+    public void setEstaWifiHabilitat(boolean estaWifiHabilitat) {
+        this.estaWifiHabilitat = estaWifiHabilitat;
+    }
+   
     
     
     @Override
@@ -107,7 +110,7 @@ public class Televisio extends Electrodomestico implements Activable, Conectable
     public void establirConexio() {
       if(esPermetConnexio()){
           estaConectadaAInternet=true;
-          System.out.println("Conexio estableïda");
+         // System.out.println("Conexio estableïda");
       }  
     }
 
